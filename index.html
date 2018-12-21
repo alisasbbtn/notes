@@ -15,30 +15,28 @@
 
   <body>
     <div class="top">
-      <div class="board__notes board__notes--all">
-        <a href="">
-          <span class="board__notes--counter">5</span> <br />
-          notes
-        </a>
+      <div class="board__notes board__notes--active">
+        <span class="counter"></span> <br />
+        <span class="counter--title"></span>
       </div>
 
       <div class="add__container">
         <input type="text" class="add__title" placeholder="Title" />
         <textarea class="add__body" placeholder="Take a note..."></textarea>
-        <button class="add__btn"><span class="ion-plus"></span></button>
+        <button type="button" class="add__btn"><span class="ion-plus"></span></button>
       </div>
 
       <div class="board__notes board__notes--archived">
-        <a href="">
-          <span class="board__notes--counter">5</span> <br />
-          archived notes
-        </a>
+        <span class="counter"></span> <br />
+        archived <span class="counter--title"></span>
       </div>
+
+      
     </div>
 
     <div class="bottom">
       <div class="container">
-        <div class="note__container">
+        <!-- <div class="note__container">
           <h1 class="note__title">Title</h1>
           <p class="note__body">
             Some content.
@@ -51,10 +49,11 @@
               <span class="note__delete ion-trash-b" title="Delete"></span>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
+    <script src="moment.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

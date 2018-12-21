@@ -35,7 +35,7 @@ textarea {
     font-size: 1rem;
 }
 
-.board__notes span,
+.counter,
 .add__title,
 h1 {
     font-size: 2rem;
@@ -62,13 +62,18 @@ h1 {
     align-self: center;
 }
 
-.board__notes a {
+.board__notes {
     color: #faf9f9;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.board__notes a:hover {
+.board__notes:hover {
     text-decoration: underline;
+}
+
+.counter--title {
+    font-size: 1.2rem;
 }
 
 .board__title {
@@ -107,6 +112,7 @@ h1 {
     padding: 5px;
     color: #faf9f9;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .add__btn:hover {
@@ -127,7 +133,7 @@ h1 {
 }
 
 .note__container {
-    width: 32%;
+    width: 30%;
     margin-bottom: 30px;
     height: 230px;
     padding: 10px;
