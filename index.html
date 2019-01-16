@@ -15,38 +15,38 @@
 
   <body>
     <div class="top">
-      <div class="board__notes board__notes--active">
-        <span class="counter"></span> <br />
-        <span class="counter--title"></span>
-      </div>
-
       <div class="add__container">
         <input type="text" class="add__title" placeholder="Title" />
         <textarea class="add__body" placeholder="Take a note..."></textarea>
         <button type="button" class="add__btn"><span class="ion-plus"></span></button>
       </div>
-
-      <div class="board__notes board__notes--archived">
-        <span class="counter"></span> <br />
-        archived <span class="counter--title"></span>
-      </div>
-
-      
+      <div class="board__notes">
+          <span class="counter"></span>
+          <span class="counter--title"></span>
+        </div>
     </div>
 
     <div class="bottom">
       <div class="container">
         <!-- <div class="note__container">
-          <h1 class="note__title">Title</h1>
-          <p class="note__body">
-            Some content.
-          </p>
+          <div class="edit__container">
+            <input type="text" class="edit__title" placeholder="Title" />
+            <textarea class="edit__body" placeholder="Edit a note..."></textarea>
+          </div>
+          <div class="note__content">
+            <h1 class="note__title">Title</h1>
+            <p class="note__body">
+              Some content.
+            </p>
+          </div>
           <div class="note__meta">
             <span class="note__date">21 Sep, 2018</span>
             <div class="note__actions">
-              <span class="note__edit ion-edit" title="Edit"></span>
-              <span class="note__archive ion-archive" title="Archive"></span>
-              <span class="note__delete ion-trash-b" title="Delete"></span>
+              <button type="button" class="note__edit"><span class="ion-edit" title="Edit"></span></button>
+              <button type="button" class="note__archive"><span class="ion-archive" title="Archive"></span></button>
+              <button type="button" class="note__delete"><span class="ion-trash-b" title="Delete"></span></button>
+              <button type="button" class="edit__note__apply"><span class="ion-checkmark" title="Apply"></span></button>
+              <button type="button" class="edit__note__cancel"><span class="ion-close" title="Cancel"></span></button>
             </div>
           </div>
         </div> -->

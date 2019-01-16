@@ -35,8 +35,7 @@ textarea {
     font-size: 1rem;
 }
 
-.counter,
-.add__title,
+input,
 h1 {
     font-size: 2rem;
 }
@@ -50,12 +49,7 @@ h1 {
     padding: 25px 0;
     text-align: center;
     display: flex;
-    flex-direction: row;
-}
-
-.top div {
-    flex-grow: 1;
-    flex-basis: 0;
+    flex-direction: column;
 }
 
 .board__notes {
@@ -65,15 +59,8 @@ h1 {
 .board__notes {
     color: #faf9f9;
     text-decoration: none;
-    cursor: pointer;
-}
-
-.board__notes:hover {
-    text-decoration: underline;
-}
-
-.counter--title {
     font-size: 1.2rem;
+    margin-top: 15px;
 }
 
 .board__title {
@@ -84,26 +71,33 @@ h1 {
 .add__container {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    outline: none;
+    border: none;
 }
 
 .add__title,
 .add__body {
-    width: 100%;
-    outline: none;
-    border: none;
-    margin-bottom: 5px;
-}
-
-.add__title {
     padding: 5px 15px;
+    margin-bottom: 5px;
 }
 
 .add__body {
     padding: 15px;
+}
+
+textarea {
+    padding: 0;
     resize: none;
     min-height: 100px;
 }
+
 
 .add__btn {
     border: none;
@@ -149,9 +143,33 @@ h1 {
     border: 1px solid #2c3e50;
 }
 
-.note__body {
+.note__container .edit__container,
+.note__container .note__meta button[class^="edit__note__"] {
+    display: none;
+}
+
+.note__container.editing .edit__container {
+    display: block;
+}
+
+.note__container.editing .note__meta button[class^="edit__note__"] {
+    display: inline-block;
+}
+
+.note__container.editing .note__content,
+.note__container.editing .note__date,
+.note__container.editing .note__meta button[class^="note__"] {
+    display: none;
+}
+
+.note__body,
+.edit__body {
     margin-top: 5px;
     overflow-y: auto;
+}
+
+.edit__title {
+    padding: 0;
 }
 
 .note__meta {
@@ -165,6 +183,11 @@ h1 {
     margin-left: auto;
 }
 
+.note__actions button {
+    background: transparent;
+    border: none;
+}
+
 .note__actions span {
     padding-right: 5px;
     opacity: 0.7;
@@ -175,7 +198,8 @@ h1 {
     opacity: 1;
 }
 
-.note__edit:hover {
+.note__edit:hover,
+.edit__note__apply:hover {
     color: #16a085;
 }
 
@@ -183,6 +207,7 @@ h1 {
     color: #e67e22;
 }
 
-.note__delete:hover {
+.note__delete:hover,
+.edit__note__cancel:hover {
     color: #e74c3c;
 }
